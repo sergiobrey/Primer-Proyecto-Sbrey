@@ -1,0 +1,163 @@
+/* Body Header */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    box-sizing: content-box;
+    font-family: Verdana;
+  }
+
+header{
+    display: flex;
+    background-color: rgb(114, 108, 96);
+    justify-content: space-around;
+    position: sticky;
+    
+ }
+
+.titulo{
+    display: flex;
+    background-color: rgb(180, 148, 85);
+    justify-content: center;
+    
+}
+
+ .header nav div ul li a{
+    text-decoration: black;
+    color: azure;
+  
+ }
+ 
+ .carousel-inner{ 
+    width: 100vw; 
+    height: 100vh;
+    padding-bottom: 15px;
+    }
+
+.grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header"
+                         "titulo titulo titulo titulo"
+                         "carouselExampleFade carouselExampleFade carouselExampleFade carouselExampleFade"
+                         "card card card card"
+
+                         "footer footer footer footer";
+}
+
+.header{
+    grid-column: 1/5;
+    grid-area: header;
+}
+
+.titulo{
+    grid-column: 1/5;
+}
+
+.carouselExampleFade{
+    grid-column: 1/5;
+}
+.card-container{
+    grid-area: card;
+    margin: 20px;
+    gap: 55px;
+}
+
+.footer{
+    grid-area: footer;
+    grid-column: 1/5;
+}
+
+.card-container-index{
+    display: grid;
+    grid-area: card;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+    }
+
+.card-container-news{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        }
+
+
+.card-body{
+    background-color: rgb(200, 152, 88)
+}
+
+.formularioregistro{
+    display: block;
+    background-color: rgb(183, 203, 202);
+    grid-column: 2/4;
+    padding: 5px;
+    margin: 10px;
+}
+
+.titulo{
+    margin-bottom: 10px;
+}
+
+.card-container-news{
+    display: grid;
+    grid-template-areas: 1/5;
+    grid-template-columns: auto;
+
+}
+
+/* Pie de Pagina  -  Footer*/
+
+footer {
+    background-color: rgb(114, 108, 96);
+    list-style: none;
+    display: flex;
+   
+}
+
+.footer nav div li a{
+    text-decoration: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    justify-content: space-between;
+    padding: 10px 100px;
+    }
+
+
+
+
+@media (max-width:420px){
+    .titulo{display: none;}
+    .header img{ width:50%}
+    .card{align-items: center;}
+
+
+}
+
+@media (max-width:420px){
+.carousel-inner{display: none;}
+    }
+    
+@media (max-width:420px){
+.header{
+    flex-direction: column;}
+            }
+
+@media (max-width:420px){
+    .header  { width: 100%; 
+    }
+}
